@@ -28,9 +28,9 @@ for url in urls:
         cleaned_data.append({"url": url, "text": content})
 
     except Exception as err:
-        print(f"❌ Failed: {url} | Error: {err}")
+        print(f"Failed: {url} | Error: {err}")
 
-# Save all cleaned text into one file
+
 with open("harvard_cleaned.txt", "w", encoding="utf-8") as f:
     for item in cleaned_data:
         f.write(f"URL: {item['url']}\n")
